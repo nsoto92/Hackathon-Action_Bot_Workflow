@@ -1,1 +1,1 @@
-function teest() {}
+function test() {}
