@@ -12,7 +12,8 @@ jobs:
 
       - name: actionBot
 
-        uses: ./Hackathon-ActionBot/
+        # uses: ./Hackathon-ActionBot/
+        uses: nsoto92/Hackathon-ActionBot@master
         with:
           channel: team_hackathon
           slackAuth: ${secrets.actionbothackathon}
