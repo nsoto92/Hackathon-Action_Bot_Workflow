@@ -1,0 +1,19 @@
+name: HackAction
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: actionBot
+
+        uses: ./Hackathon-ActionBot/
+        with:
+          channel: team_hackathon
+          slackAuth: ${secrets.actionbothackathon}
+          repo-token: ${secrets.GITHUB_TOKEN}
