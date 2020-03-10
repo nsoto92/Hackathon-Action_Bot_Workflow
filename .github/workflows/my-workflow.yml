@@ -15,6 +15,6 @@ jobs:
         # uses: ./Hackathon-ActionBot/
         uses: nsoto92/Hackathon-ActionBot@master
         with:
-          channel: team_hackathon
+          channel: \#team_hackathon
           slackAuth: ${{secrets.slackbot_token}}
           repo-token: ${{secrets.GITHUB_TOKEN}}
