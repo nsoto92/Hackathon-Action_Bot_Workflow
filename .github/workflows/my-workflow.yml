@@ -5,7 +5,10 @@ on:
     types: [labeled]
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/5 * * * *'    
+    # every 5 minutes is minimun ofr action schduler
+    - cron: "*/5 * * * *"
+    # run at 9 am every day
+    # - chron: '0 9 * * *'
 
 jobs:
   action:
@@ -18,6 +21,7 @@ jobs:
         # uses: ./Hackathon-ActionBot/
         uses: nsoto92/Hackathon-ActionBot@master
         with:
+          active: true
           channel: team_hackathon
-          slackAuth: ${{secrets.slackbot_token}}
+          slack-auth: ${{secrets.slackbot_token}}
           repo-token: ${{secrets.GITHUB_TOKEN}}
