@@ -5,7 +5,7 @@ on:
     types: [labeled]
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/5 * * * *'    
+    - cron: "*/5 * * * *"
 
 jobs:
   action:
@@ -21,3 +21,4 @@ jobs:
           channel: team_hackathon
           slackAuth: ${{secrets.slackbot_token}}
           repo-token: ${{secrets.GITHUB_TOKEN}}
+          active: false
