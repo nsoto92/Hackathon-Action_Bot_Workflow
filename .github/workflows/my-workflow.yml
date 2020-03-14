@@ -21,4 +21,4 @@ jobs:
           channel: team_hackathon
           slackAuth: ${{secrets.slackbot_token}}
           repo-token: ${{secrets.GITHUB_TOKEN}}
-          active: false
+          active: true
